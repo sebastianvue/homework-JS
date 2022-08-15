@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(to right, #9599CE , #33527B);
+}
+
+#calculator-grid {
+    display: grid;
+    grid-template: repeat(5, minmax(100px, 150px))/ repeat(5, 100px);
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+button {
+    transition: all 2s;
+}
+
+button:hover {
+    opacity: 0.5;
+    transition: width;
+}
+
+.tall {
+    grid-row: span 2;
+}
+
+#result {
+    grid-column: 1 / -1;
+    background-color: rgba(51, 51, 51, 0.4);
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#result #previous-number{
+    font-size: 1rem;
+    color: #f3f3f3b4;
+}
+
+#result #current-number{
+    font-size: 2rem;
+    color: #fff;
+}
